@@ -1,0 +1,128 @@
+<!--User-->
+<div>
+    <app-user/>
+  </div>
+  <!--fin de User-->
+  
+  <!--Cerrar Sesion-->
+  <app-cerrar/>
+  <!--FIn de Cerrar Sesion-->
+  
+  <div class="mt-4">
+    <div class="flex justify-center text-blue-500  text-4xl">
+      Sistema de Facturacion
+    </div>
+    <!--Menu -->
+    <div class="flex flex-row justify-center space-x-4 text-red-400">
+      <!--Menu Opciones-->
+        <!--Registrar Cliente-->
+        <div>
+          <mat-card>
+            <button class=""
+            (click)="onButtonRegisterClient()"
+            >
+            <mat-card-header>
+              <mat-card-title>Registrar Cliente</mat-card-title>
+            </mat-card-header>
+          </button>
+          </mat-card>
+        </div>
+  
+         <!--Editar Cliente-->
+         <div>
+          <mat-card>
+            <button
+            (click)=" onButtonEditeClient()"
+            >
+            <mat-card-header>
+              <mat-card-title>Editar Cliente</mat-card-title>
+            </mat-card-header>
+          </button>
+          </mat-card>
+        </div>
+  
+        <!--Vender Cliente-->
+        <div>
+          <mat-card>
+            <button
+            (click)="onButtonSellClient()"
+            >
+            <mat-card-header>
+              <mat-card-title>Vender Cliente</mat-card-title>
+            </mat-card-header>
+          </button>
+          </mat-card>
+        </div>
+      <!---Fin de Menu -->
+    </div>
+
+
+    <!----Formulario de Registro-->
+    <div class="flex justify-center m-4">
+      <div class="w-full h-2/3">
+        <div class="mt-6 rounded-md bg-blue-300 p-4 flex flex-col gap-4" style="box-shadow: 0px 2px 3px #DAE1E7;">
+          <form [formGroup]="form">
+            <div class="sm:text-red-500   font-semibold md:text-black text-3xl">Formulario de Registro de Clientes</div>
+              <!--Campos de Formulario-->
+              <div class="sm:m-5 md:m-8 ">
+                 <!--Ruc-->
+              <div>
+                <label class="text-[#4C5464] font-semibold">Ruc</label>
+                <mat-form-field appearance="fill" class="w-full  mt-2">
+                    <input matInput type="text" placeholder="Ingrese" formControlName="ruc">
+                </mat-form-field>
+              </div>
+  
+              <!--Nombre---->
+              <div>
+                <label class="text-[#4C5464] font-semibold">Nombre</label>
+                <mat-form-field appearance="fill" class="w-full mt-2">
+                    <input matInput type="text" placeholder="Ingrese" formControlName="nombre">
+                </mat-form-field>
+              </div>
+  
+               <!--Ubicacion---->
+               <div>
+                <label class="text-[#4C5464] font-semibold">Ubicacion</label>
+                <mat-form-field appearance="fill" class="w-full mt-2">
+                    <input matInput type="text" placeholder="Ingrese" formControlName="ubicacion">
+                </mat-form-field>
+              </div>
+  
+               <!--Telefono---->
+               <div>
+                <label class="text-[#4C5464] font-semibold">Telefono:</label>
+                <mat-form-field appearance="fill" class="w-full mt-2">
+                    <input matInput type="text" placeholder="Ingrese" formControlName="telefono">
+                </mat-form-field>
+              </div>
+  
+               <!--Gmail---->
+               <div>
+                <label class="text-[#4C5464] font-semibold">Gmail</label>
+                <mat-form-field appearance="fill" class="w-full mt-2">
+                    <input matInput type="gmail" placeholder="Ingrese" formControlName="gmail">
+                </mat-form-field>
+              </div>
+  
+  
+               <!--Placa---->
+               <div>
+                <label class="text-[#4C5464] font-semibold">Placa</label>
+                <mat-form-field appearance="fill" class="w-full mt-2">
+                    <input matInput type="text" placeholder="Ingrese" formControlName="placa">
+                </mat-form-field>
+              </div>  
+              </div>
+                 <!--Registrar Cliente-->
+            <div class=" flex justify-end">
+              <button class="rounded-md bg-blue-600 text-xl" (click)="onSubmit()">Registrar Cliente</button>
+          </div>
+  
+          </form>  
+      </div>
+       </div>
+
+    </div>
+    <!--Fin de Formulario de Registro-->
+  </div>

@@ -1,0 +1,65 @@
+<ng-template #login>
+    <ng-container>
+     <!-- Sign in form -->
+    
+    <div class="min-h-screen flex items-center justify-center bg-gradient-to-r from-indigo-500">
+        <form class="bg-slate-400 rounded-xl h-1/4 w-80" >
+            <h2 class="flex justify-center mt-3 font-mono font-normal text-2xl">Iniciar Sesión</h2>
+            <!--Logo-->
+            <div class="flex justify-center mb-4">
+                <img src="https://th.bing.com/th/id/R.7f70ccdaea42a3ea7f34f470040c1b29?rik=XpAJhC2Net1BXg&pid=ImgRaw&r=0" width="100px" height="100px">
+            </div>
+            <div class="flex flex-col justify-center ">
+               <!-- Email field -->
+               <mat-form-field class="w-full  ">
+                <label class="text-left text-black text-xl">Usuario:</label>
+                <input
+                    class="w-full h-10"
+                    placeholder="Ingrese su usuario"
+                    formControlName="'usuario'">
+                 </mat-form-field>
+    
+            <!-- Password field -->
+            <mat-form-field class="w-full ">
+                <label class="text-left text-black text-xl">Contraseña:</label>
+                <input
+                    class="w-full h-10"
+                    placeholder="Ingrese su contraseña"
+                    type="password"
+                    formControlName="'contrasena'"
+                    >
+            </mat-form-field>
+
+            <mat-form-field>
+                <div class="text-black text-xs">
+                    <p class="underline underline-offset-1">¿Olvido su Contraseña?</p>
+                    <p class="underline underline-offset-1">Recuperar Contraseña</p>
+                </div>
+            </mat-form-field>
+            <mat-form-field class="flex justify-center m-1">
+                <div class="flex grid-cols-2 space-x-6">
+                    <div>
+                        <button class="rounded  m-auto bg-slate-500 hover:bg-slate-200 flex justify-center h-8 w-16" 
+                        (click)="goBack()">
+                        Regresar 
+                        </button>
+                    </div>
+
+                    <div class=" ">
+                        <button class="rounded m-auto bg-slate-500 hover:bg-slate-200 flex justify-center h-8 w-16"
+                        (click)="irDashboard()">
+                        Iniciar
+                        </button>
+                    </div>
+                </div>
+            </mat-form-field>
+            
+            </div>
+         </form>
+    </div>
+
+    </ng-container>
+</ng-template>
+
+
+<ng-container *ngTemplateOutlet="login"></ng-container>

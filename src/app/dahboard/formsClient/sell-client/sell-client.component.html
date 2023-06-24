@@ -1,0 +1,58 @@
+<!--User-->
+<div>
+    <app-user/>
+  </div>
+  <!--fin de User-->
+  
+  <!--Cerrar Sesion-->
+  <app-cerrar/>
+  <!--FIn de Cerrar Sesion-->
+  
+  <div class="mt-4">
+    <div class="flex justify-center text-blue-500  text-4xl">
+      Sistema de Facturacion
+    </div>
+    <!--Menu -->
+    <div class="flex flex-row justify-center space-x-4 text-red-400">
+      <!--Menu Opciones-->
+        <!--Registrar Cliente-->
+        <div>
+          <mat-card>
+            <button class=""
+            (click)="onButtonRegisterClient()"
+            >
+            <mat-card-header>
+              <mat-card-title>Registrar Cliente</mat-card-title>
+            </mat-card-header>
+          </button>
+          </mat-card>
+        </div>
+  
+         <!--Editar Cliente-->
+         <div>
+          <mat-card>
+            <button
+            (click)=" onButtonEditeClient()"
+            >
+            <mat-card-header>
+              <mat-card-title>Editar Cliente</mat-card-title>
+            </mat-card-header>
+          </button>
+          </mat-card>
+        </div>
+  
+        <!--Vender Cliente-->
+        <div>
+          <mat-card>
+            <button
+            (click)="onButtonSellClient()"
+            >
+            <mat-card-header>
+              <mat-card-title>Vender Cliente</mat-card-title>
+            </mat-card-header>
+          </button>
+          </mat-card>
+        </div>
+      <!---Fin de Menu -->
+    </div>
+  </div>

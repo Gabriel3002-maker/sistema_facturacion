@@ -1,0 +1,60 @@
+<div class="w-full max-w-screen-xl mx-auto  p-6 md:p-8">
+    
+    <div class="flex items-center justify-center mt-10">
+        <h1 class="flex justify-center text-4xl text-dark-300 font-medium">Registro</h1>
+    </div>
+    <div class="mt-6 rounded-md bg-slate-300 p-4 flex flex-col gap-4" style="box-shadow: 0px 2px 3px #358bd6;">
+        <form  [formGroup]="form">
+            <div class="text-[#fcfcfc] text-lg  font-extrabold">Datos Generales</div>
+            <div class="mt-4 grid md:grid-cols-3 sm:grid-cols-2 grid-cols-1 gap-x-4 gap-y-1">
+                <div>
+                    <label class="text-[#4C5464] font-semibold">Cédula</label>
+                    <mat-form-field appearance="fill" class="w-full mt-2">
+                        <input matInput type="text" placeholder="Ingrese" formControlName="ruc">
+                    </mat-form-field>
+                </div>
+                <div>
+                    <label class="text-[#4C5464] font-semibold">Nombres</label>
+                    <mat-form-field appearance="fill" class="w-full mt-2">
+                        <input matInput type="text" placeholder="Ingrese" formControlName="nombre">
+                    </mat-form-field>
+                </div>
+                <div>
+                    <label class="text-[#4C5464] font-semibold">Apellidos</label>
+                    <mat-form-field appearance="fill" class="w-full mt-2">
+                        <input matInput type="text" placeholder="Ingrese" formControlName="apellidos">
+                    </mat-form-field>
+                </div>
+
+                <div>
+                    <label class="text-[#4C5464] font-semibold">Teléfono</label>
+                    <mat-form-field appearance="fill" class="w-full mt-2">
+                        <input matInput type="text" placeholder="Ingrese" formControlName="telefono">
+                    </mat-form-field>
+                </div>
+
+                <div>
+                    <label class="text-[#4C5464] font-semibold">Usuario</label>
+                    <mat-form-field appearance="fill" class="w-full mt-2">
+                    <input matInput type="text" placeholder="Ingrese" formControlName="usuario">
+                    </mat-form-field>
+                </div>
+
+                <div>
+                    <label class="text-[#4C5464] font-semibold">Contraseña</label>
+                    <mat-form-field appearance="fill" class="w-full mt-2">
+                    <input matInput type="password" placeholder="Ingrese" formControlName="contrasena">
+                    </mat-form-field>
+                </div>
+
+
+            </div>
+            <!--Button left-->
+            <div class=" flex justify-end">
+                <button class="rounded-md bg-blue-600 text-xl" (click)="onSubmit()">Registrar</button>
+            </div>
+        </form>
+       
+    </div>
+</div>
+
